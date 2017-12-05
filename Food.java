@@ -8,7 +8,7 @@ public class Food {
 	private ArrayStack onion;
 	
 	Food() {
-		
+	
 	}
 	
 	public int getExpirationDate() {

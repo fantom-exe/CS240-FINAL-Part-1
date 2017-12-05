@@ -13,8 +13,6 @@ public class ArrayQueue<T> implements QueueInterface<T> {
 //	private EmptyQueueException emptyQueueException = new EmptyQueueException(); // exception to throw of queue is empty
 	
 	ArrayQueue() {
-		checkCapacity();
-		
 		@SuppressWarnings("unchecked")
 		T[] tempQueue = (T[]) new Object[MAX_CAPACITY - 1];
 		queue = tempQueue;

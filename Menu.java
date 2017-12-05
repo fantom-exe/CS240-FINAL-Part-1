@@ -3,6 +3,8 @@
  */
 public class Menu {
 	
-	public burger()
+	public void burger() {
+	
+	}
 	
 }
