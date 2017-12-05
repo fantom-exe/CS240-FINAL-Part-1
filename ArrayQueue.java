@@ -5,14 +5,14 @@
 
 public class ArrayQueue<T> implements QueueInterface<T> {
 	// member variables
-	private static final int MAX_CAPACITY = 10;
+	private static final int MAX_CAPACITY = 50;
 	private T[] queue;
 	private int front; // front of queue
 	private int back; // back of queue
 	
 //	private EmptyQueueException emptyQueueException = new EmptyQueueException(); // exception to throw of queue is empty
 	
-	public ArrayQueue() {
+	ArrayQueue() {
 		checkCapacity();
 		
 		@SuppressWarnings("unchecked")
@@ -29,7 +29,7 @@ public class ArrayQueue<T> implements QueueInterface<T> {
 			back++;
 			queue[back] = newEntry;
 		}
-		else System.out.println("Queue is full!");
+		else System.out.println("Line is full!");
 	}
 	
 	/** Removes and returns the entry at the front of this queue.
