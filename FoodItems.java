@@ -1,4 +1,4 @@
-public class Food {
+public class FoodItems {
 	private int expirationDate;
 	private ArrayStack bun;
 	private ArrayStack cheese;
@@ -7,7 +7,7 @@ public class Food {
 	private ArrayStack tomato;
 	private ArrayStack onion;
 	
-	Food() {
+	FoodItems() {
 	
 	}
 	
@@ -19,12 +19,12 @@ public class Food {
 		expirationDate = date;
 	}
 	
-	private int getWastedFoodAmount(Food food) {
+	private int getWastedFoodAmount(FoodItems foodItems) {
 		
 		return -1;
 	}
 	
-	private void setWastedFood(Food food, int wastedAmount) {
+	private void setWastedFood(FoodItems foodItems, int wastedAmount) {
 	
 	}
 	

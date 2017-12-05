@@ -5,26 +5,41 @@ import java.util.Random;
  */
 public class BusinessDay {
 	// member variables
-	Random rand;
+	private Random rand;
 	
 	// business variables
-	private int hoursOfOperation;
+//	private int hoursOfOperation;
 	private Customer customer;
 	private ArrayQueue line;
 	private int lostCustomerDay;
+	private int customersArrived;
 	
 	// new day
 	BusinessDay() {
-		rand = new Random();
+		rand = new Random(System.currentTimeMillis());
 		
-		hoursOfOperation = 10;
+//		hoursOfOperation = 9;
 		customer = new Customer();
 		line = new ArrayQueue();
 		lostCustomerDay = 0;
+		customersArrived = 0;
 	}
 	
 	private void generateCustomer() {
-		// if queue full, intCustomers++
+		customersArrived = rand.nextInt(100);
+		
+		// check if more than 50 customers arrived
+		if(customersArrived > 50) {
+			lostCustomerDay += customersArrived - 50;
+			
+			customersArrived = 50;
+		}
+		
+		// add customs to queue
+		while (customersArrived > 0) {
+			line.enqueue(customer);
+			customersArrived--;
+		}
 		
 	}
 	

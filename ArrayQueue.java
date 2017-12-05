@@ -10,8 +10,6 @@ public class ArrayQueue<T> implements QueueInterface<T> {
 	private int front; // front of queue
 	private int back; // back of queue
 	
-//	private EmptyQueueException emptyQueueException = new EmptyQueueException(); // exception to throw of queue is empty
-	
 	ArrayQueue() {
 		@SuppressWarnings("unchecked")
 		T[] tempQueue = (T[]) new Object[MAX_CAPACITY - 1];
