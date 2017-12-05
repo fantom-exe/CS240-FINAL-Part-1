@@ -1,26 +1,29 @@
+/**
+ * Restaurant Food
+ */
 public class Food {
 	private ArrayStack stack;
-	private int expirationDate; // if 0, no expiration
+	private int expirationDate; // default 0 -> no expiration specified
 	
 	Food() {
 		stack = new ArrayStack();
 		expirationDate = 0;
 	}
 	
-	public int getExpirationDate() {
+	public int checkExpirationDate() {
 		return expirationDate;
 	}
 	
-	private void setExpirationDate(int date) {
+	public void setExpirationDate(int date) {
 		expirationDate = date;
 	}
 	
-	private int getWastedFoodAmount(Food food) {
+	public int getWastedFoodAmount(Food food) {
 		
 		return -1;
 	}
 	
-	private void setWastedFood(Food food, int wastedAmount) {
+	public void setWastedFood(Food food, int wastedAmount) {
 	
 	}
 	
