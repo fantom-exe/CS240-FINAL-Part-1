@@ -25,7 +25,7 @@ public class BusinessDay {
 		customersArrived = 0;
 	}
 	
-	private void generateCustomer() {
+	public void generateCustomers() {
 		customersArrived = rand.nextInt(100);
 		
 		// check if more than 50 customers arrived
@@ -41,19 +41,21 @@ public class BusinessDay {
 			customersArrived--;
 		}
 		
+		
+		
 	}
 	
-	private void placeOrder() {
+	public void placeOrder() {
 		// if order successful, itemOrdered++
 		// if items ordered not available, lostCustomerDay++
 	}
 	
-	private void shipment() {
+	public void shipment() {
 		// Shipment arrive 9:00AM every 3-6 days
 		// Randomly add 700-1000 total items
 	}
 	
-	private void endDay() {
+	public void endDay() {
 		// Sort food items by expiration day. (pick any sort)
 		//Place items about to expire on top of stack. If item expires remove item. Increment lost item.
 		//Example if I throw away a tomato I will increment wasteTomtato

@@ -12,6 +12,8 @@ public class TEST {
 		for(int date = startingDate; date <= endingDate; date++) { // days
 			day = new BusinessDay();
 			
+			day.generateCustomers();
+			
 			for(int time = openingTime; time <= closingTime; time++) { // hours
 				System.out.println(time);
 				
