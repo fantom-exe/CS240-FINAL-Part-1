@@ -2,9 +2,10 @@
  * Restaurant menu
  */
 public class Menu {
+	private ArrayList list;
 	
-	public void burger() {
-	
+	Menu() {
+		list = new ArrayList();
 	}
 	
 }

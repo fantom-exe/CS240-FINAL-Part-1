@@ -9,18 +9,23 @@ public class TEST {
 		int closingTime = 19; // 7 PM (format: 24 hr)
 		BusinessDay day;
 		
-		for(int date = startingDate; date <= endingDate; date++) { // days
-			day = new BusinessDay();
+		// business days
+		for(int date = startingDate; date <= endingDate; date++) {
+			day = new BusinessDay(); // begin new day
+			day.possibleShipment(); // check if shipments arrived (NOT daily, every 3-6 days)
 			
-			day.generateCustomers();
-			
-			for(int time = openingTime; time <= closingTime; time++) { // hours
+			// business hours
+			for(int time = openingTime; time <= closingTime; time++) {
 				System.out.println(time);
 				
-				
-				
+				// customers attend
+				day.generateCustomers();
+				// customers order
+				day.placeOrders();
 			}
 			
+			// end the day
+			day.closing();
 		}
 		
 	}
