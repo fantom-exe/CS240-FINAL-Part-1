@@ -3,12 +3,12 @@
  */
 public class Inventory {
 	// Food items
-	Food bun;
-	Food cheese;
-	Food patty;
-	Food lettuce;
-	Food tomato;
-	Food onion;
+	private Food bun;
+	private Food cheese;
+	private Food patty;
+	private Food lettuce;
+	private Food tomato;
+	private Food onion;
 	
 	// Menu items
 	private ArrayList burger; // 1
@@ -31,6 +31,35 @@ public class Inventory {
 		setupFoods();
 		setupMenu();
 		setupInventory();
+	}
+	
+	/**
+	 * Order Menu Item
+	 */
+	public void order(int orderNum) {
+		switch (orderNum) {
+			case 1:
+				
+				break;
+			case 2:
+				
+				break;
+			case 3:
+				
+				break;
+			case 4:
+				
+				break;
+			case 5:
+				
+				break;
+			case 6:
+				
+				break;
+			default:
+				System.out.println("ERROR: No such menu item!");
+				break;
+		}
 	}
 	
 	/**
@@ -67,6 +96,7 @@ public class Inventory {
 		burger.add(lettuce);
 		burger.add(tomato);
 		burger.add(onion);
+		
 		// cheese burger
 		cheeseBurger = new ArrayList(); // 2
 		cheeseBurger.add(cheese);
@@ -75,18 +105,21 @@ public class Inventory {
 		cheeseBurger.add(lettuce);
 		cheeseBurger.add(tomato);
 		cheeseBurger.add(onion);
+		
 		// vegan lettuce wrap burger
 		veganLettuceWrapBurger = new ArrayList(); // 3
 		veganLettuceWrapBurger.add(lettuce);
 		veganLettuceWrapBurger.add(lettuce);
 		veganLettuceWrapBurger.add(tomato);
 		veganLettuceWrapBurger.add(onion);
+		
 		// burger no onion
 		burgerNoOnion = new ArrayList(); // 4
 		burgerNoOnion.add(bun);
 		burgerNoOnion.add(patty);
 		burgerNoOnion.add(lettuce);
 		burgerNoOnion.add(tomato);
+		
 		// cheese burger no onion
 		cheeseBurgerNoOnion = new ArrayList(); // 5
 		cheeseBurgerNoOnion.add(cheese);
@@ -94,6 +127,7 @@ public class Inventory {
 		cheeseBurgerNoOnion.add(patty);
 		cheeseBurgerNoOnion.add(lettuce);
 		cheeseBurgerNoOnion.add(tomato);
+		
 		// burger no tomato
 		burgerNoTomato = new ArrayList(); // 6
 		burgerNoTomato.add(bun);
