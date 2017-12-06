@@ -53,7 +53,15 @@ public class BusinessDay {
 	
 	// orders placed
 	public void placeOrders() {
-		// if order successful, itemOrdered++
+		
+		
+		while(!line.isEmpty()) {
+			// order
+			inventory.order(1 + rand.nextInt(5));
+			
+			// shorten line
+			line.dequeue();
+		}
 		
 		// if items ordered not available, lostCustomerDay++
 		
@@ -63,6 +71,7 @@ public class BusinessDay {
 	public void possibleShipment() {
 		// Shipment arrive 9:00AM every 3-6 days
 		
+		
 		// Randomly add 700-1000 total items
 		
 	}
@@ -70,17 +79,15 @@ public class BusinessDay {
 	// closing operations
 	public void closing() {
 		// Sort food items by expiration day. (pick any sort)
-		
 		//Place items about to expire on top of stack. If item expires remove item. Increment lost item.
+		
 		
 		//Example if I throw away a tomato I will increment wasteTomtato
 		
-		// call output()
-		output();
 	}
 	
 	// prints daily data
-	private void output() {
+	public void output(int day, int time) {
 		// the day, customers lost, wasted items, items ordered
 		System.out.println();
 		

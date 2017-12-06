@@ -21,8 +21,11 @@ public class TEST {
 				
 				// customers attend
 				day.generateCustomers();
-				// customers order
+				// customers order then leave
 				day.placeOrders();
+				
+				// print
+				day.output(date, time);
 			}
 			
 			// end the day

@@ -34,30 +34,58 @@ public class Inventory {
 	}
 	
 	/**
-	 * Order Menu Item
+	 * Add new items to inventory
 	 */
-	public void order(int orderNum) {
-		switch (orderNum) {
+	public void addItem(int item) {
+		switch (item) {
 			case 1:
-				
+				bunInventory.push(bun);
 				break;
 			case 2:
-				
+				cheeseInventory.push(cheese);
 				break;
 			case 3:
-				
+				pattyInventory.push(patty);
 				break;
 			case 4:
-				
+				lettuceInventory.push(lettuce);
 				break;
 			case 5:
-				
+				tomatoInventory.push(tomato);
 				break;
 			case 6:
-				
+				onionInventory.push(onion);
 				break;
-			default:
-				System.out.println("ERROR: No such menu item!");
+		}
+		
+	}
+	
+	/**
+	 * Order Menu Item
+	 */
+	public boolean order(int orderNum) {
+		switch (orderNum) {
+			case 1:
+				bunInventory.pop();
+				pattyInventory.pop();
+				lettuceInventory.pop();
+				tomatoInventory.pop();
+				onionInventory.pop();
+				break;
+			case 2:
+				cheeseInventory.push(cheese);
+				break;
+			case 3:
+				pattyInventory.push(patty);
+				break;
+			case 4:
+				lettuceInventory.push(lettuce);
+				break;
+			case 5:
+				tomatoInventory.push(tomato);
+				break;
+			case 6:
+				onionInventory.push(onion);
 				break;
 		}
 	}
@@ -137,7 +165,7 @@ public class Inventory {
 	}
 	
 	/**
-	 * Setup Inventory
+	 * Setup Empty Inventories
 	 */
 	private void setupInventory() {
 		bunInventory = new ArrayStack();
@@ -147,7 +175,5 @@ public class Inventory {
 		tomatoInventory = new ArrayStack();
 		onionInventory = new ArrayStack();
 	}
-	
-	
 	
 }
