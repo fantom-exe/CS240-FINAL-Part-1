@@ -29,20 +29,70 @@ public class Inventory {
 	private ArrayStack onionInventory;
 	
 	// items sold
-	int countItemOne;
-	int countItemTwo;
-	int countItemThree;
-	int countItemFour;
-	int countItemFive;
-	int countItemSix;
+	private int countItemOne;
+	private int countItemTwo;
+	private int countItemThree;
+	private int countItemFour;
+	private int countItemFive;
+	private int countItemSix;
+	
+	// sales
+	public int getCountItemOne() {
+		return countItemOne;
+	}
+	
+	public int getCountItemTwo() {
+		return countItemTwo;
+	}
+	
+	public int getCountItemThree() {
+		return countItemThree;
+	}
+	
+	public int getCountItemFour() {
+		return countItemFour;
+	}
+	
+	public int getCountItemFive() {
+		return countItemFive;
+	}
+	
+	public int getCountItemSix() {
+		return countItemSix;
+	}
 	
 	// items wasted
-	int wasteCheese;
-	int wasteBun;
-	int wastePatty;
-	int wasteLettuce;
-	int wasteTomato;
-	int wasteOnion;
+	private int wasteCheese;
+	private int wasteBun;
+	private int wastePatty;
+	private int wasteLettuce;
+	private int wasteTomato;
+	private int wasteOnion;
+	
+	// wasted
+	public int getWasteCheese() {
+		return wasteCheese;
+	}
+	
+	public int getWasteBun() {
+		return wasteBun;
+	}
+	
+	public int getWastePatty() {
+		return wastePatty;
+	}
+	
+	public int getWasteLettuce() {
+		return wasteLettuce;
+	}
+	
+	public int getWasteTomato() {
+		return wasteTomato;
+	}
+	
+	public int getWasteOnion() {
+		return wasteOnion;
+	}
 	
 	// setup
 	Inventory() {

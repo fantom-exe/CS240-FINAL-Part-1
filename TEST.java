@@ -31,7 +31,7 @@ public class TEST {
 				day.placeOrders();
 				
 				// print
-				day.output(date, time);
+				day.output(date);
 			}
 			
 			// end the day

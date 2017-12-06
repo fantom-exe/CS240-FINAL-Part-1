@@ -13,7 +13,6 @@ public class BusinessDay {
 	private ArrayQueue line;
 	private int lostCustomerDay;
 	private int customersArrived;
-	private ShellSort shellSort;
 	
 	// new day
 	BusinessDay() {
@@ -24,7 +23,6 @@ public class BusinessDay {
 		line = new ArrayQueue();
 		lostCustomerDay = 0;
 		customersArrived = 0;
-		shellSort = new ShellSort();
 	}
 	
 	// line of customers
@@ -91,9 +89,10 @@ public class BusinessDay {
 	}
 	
 	// prints daily data
-	public void output(int day, int time) {
+	public void output(int day) {
 		// the day, customers lost, wasted items, items ordered
-		System.out.println();
+		System.out.println("Day: December " + (day - 1200) + " | Customers lost: " + lostCustomerDay +
+				" | Wasted Items " + inventory.getWasteBun());
 		
 		// then the dict and everything on a new line
 	}
