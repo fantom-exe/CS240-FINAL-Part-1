@@ -18,13 +18,4 @@ public class Food {
 		expirationDate = date;
 	}
 	
-	public int getWastedFoodAmount(Food food) {
-		
-		return -1;
-	}
-	
-	public void setWastedFood(Food food, int wastedAmount) {
-	
-	}
-	
 }

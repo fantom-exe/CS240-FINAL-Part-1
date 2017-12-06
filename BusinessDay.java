@@ -27,11 +27,6 @@ public class BusinessDay {
 		customersArrived = 0;
 	}
 	
-	// setup inventory
-	public void setupInventory() {
-	
-	}
-	
 	// line of customers
 	public void generateCustomers() {
 		customersArrived = 1 + rand.nextInt(100);
@@ -53,17 +48,15 @@ public class BusinessDay {
 	
 	// orders placed
 	public void placeOrders() {
-		
-		
+		// customers order one by one
 		while(!line.isEmpty()) {
-			// order
-			inventory.order(1 + rand.nextInt(5));
+			// order failed
+			if(!inventory.order(1 + rand.nextInt(5)))
+				lostCustomerDay++;
 			
 			// shorten line
 			line.dequeue();
 		}
-		
-		// if items ordered not available, lostCustomerDay++
 		
 	}
 	
