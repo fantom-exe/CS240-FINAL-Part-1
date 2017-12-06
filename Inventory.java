@@ -135,6 +135,10 @@ public class Inventory {
 	 */
 	public void sort() {
 //		bunInventory.
+//		int[] array = new int[5000];
+//		while (bunInventory.peek() != null) {
+//
+//		}
 //		shellSort.iterativeShellSort();
 	}
 	

@@ -29,7 +29,6 @@ public class TEST {
 				day.generateCustomers();
 				// customers order then leave
 				day.placeOrders();
-				
 			}
 			
 			// print

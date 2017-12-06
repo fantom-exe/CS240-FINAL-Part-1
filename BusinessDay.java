@@ -84,8 +84,6 @@ public class BusinessDay {
 		
 		//Example if I throw away a tomato I will increment wasteTomtato
 		
-		
-		inventory.resetCounters();
 	}
 	
 	// prints daily data
