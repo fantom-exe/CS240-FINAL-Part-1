@@ -62,13 +62,22 @@ public class BusinessDay {
 		
 	}
 	
-	// possible shipment arrives
-	public void possibleShipment() {
+	// shipment arrives
+	public void shipmentArrived() {
 		// Shipment arrive 9:00AM every 3-6 days
-		
-		
 		// Randomly add 700-1000 total items
+		int numOfItems = 700 + rand.nextInt(300);
 		
+		while (numOfItems > 0) {
+			inventory.addItem(1 + rand.nextInt(6));
+			
+			numOfItems--;
+		}
+	}
+	
+	// possible shipment date
+	public int nextShipmentDate(int todaysDate) {
+		return todaysDate + rand.nextInt(3) + 3;
 	}
 	
 	// closing operations
