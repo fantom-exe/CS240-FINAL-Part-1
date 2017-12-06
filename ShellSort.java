@@ -2,8 +2,7 @@ public class ShellSort {
 	/**
 		Using Hibbard Sequence -> 1, 3, 7, ..., (2 * previous + 1)
 	*/
-	public void iterative(int[] array) {
-		
+	public void iterativeShellSort(int[] array) {
 		// find sequence #
 		int seqNum = 1;
 		
@@ -52,10 +51,6 @@ public class ShellSort {
 			}
 		}
 		
-	}
-	
-	public void recursive(IntegerArray array) {
-	
 	}
 	
 	// print contents of array

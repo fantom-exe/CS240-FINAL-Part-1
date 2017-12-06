@@ -14,6 +14,7 @@ public class BusinessDay {
 	private ArrayQueue line;
 	private int lostCustomerDay;
 	private int customersArrived;
+	private ShellSort shellSort;
 	
 	// new day
 	BusinessDay() {
@@ -25,6 +26,7 @@ public class BusinessDay {
 		line = new ArrayQueue();
 		lostCustomerDay = 0;
 		customersArrived = 0;
+		shellSort = new ShellSort();
 	}
 	
 	// line of customers
@@ -73,7 +75,7 @@ public class BusinessDay {
 	public void closing() {
 		// Sort food items by expiration day. (pick any sort)
 		//Place items about to expire on top of stack. If item expires remove item. Increment lost item.
-		
+		shellSort.iterativeShellSort();
 		
 		//Example if I throw away a tomato I will increment wasteTomtato
 		

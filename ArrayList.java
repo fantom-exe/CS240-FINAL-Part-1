@@ -8,7 +8,7 @@ public class ArrayList<T> implements ListInterface<T> {
 	
 	// defaults
 	ArrayList() {
-		list = (T[])new Object[10];
+		list = (T[])new Object[6];
 		currentSize = 0;
 	}
 	
@@ -34,21 +34,41 @@ public class ArrayList<T> implements ListInterface<T> {
 	}
 	
 	// remove from position
-	public T remove(int givenPosition) {
+	public T remove(int position) throws IndexOutOfBoundsException {
+		// check if newPosition within bounds
+		if (position < 1 || position > getLength() + 1)
+			throw new IndexOutOfBoundsException();
 		
+		// is empty
+		if(isEmpty())
+			throw new EmptyListException();
 		
-		return null;
+		T removed = list[position];
+		list[position] = null;
+		currentSize--;
+		
+		return removed;
 	}
 	
 	// empty list
-	public void clear() {
-	
+	public void clear()	{
+		for(T e : list)
+			e = null;
+		
+		currentSize = 0;
 	}
 	
-	//
-	public T replace(int givenPosition, T newEntry) {
-		return null;
+	// replace item at position
+	public T replace(int position, T item) throws EmptyListException {
+		if(isEmpty())
+			throw new EmptyListException();
+		
+		T replaced = list[position];
+		list[position] = item;
+		
+		return replaced;
 	}
+	
 	
 	// return item at position
 	public T getEntry(int givenPosition) {
@@ -66,8 +86,8 @@ public class ArrayList<T> implements ListInterface<T> {
 		return currentSize;
 	}
 	
-	//
 	public boolean isEmpty() {
-		return false;
+		return currentSize == 0;
 	}
+	
 }
