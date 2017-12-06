@@ -1,3 +1,5 @@
+import java.util.EmptyStackException;
+
 /**
  * Food Inventory
  */
@@ -66,28 +68,107 @@ public class Inventory {
 	public boolean order(int orderNum) {
 		switch (orderNum) {
 			case 1:
+				try {
+					bunInventory.peek();
+					pattyInventory.peek();
+					lettuceInventory.peek();
+					tomatoInventory.peek();
+					onionInventory.peek();
+				} catch (EmptyStackException e) {
+					return false;
+				}
+				
 				bunInventory.pop();
 				pattyInventory.pop();
 				lettuceInventory.pop();
 				tomatoInventory.pop();
 				onionInventory.pop();
-				break;
+				return true;
 			case 2:
-				cheeseInventory.push(cheese);
-				break;
+				try {
+					cheeseInventory.peek();
+					bunInventory.peek();
+					pattyInventory.peek();
+					lettuceInventory.peek();
+					tomatoInventory.peek();
+					onionInventory.peek();
+				} catch (EmptyStackException e) {
+					return false;
+				}
+				
+				cheeseInventory.pop();
+				bunInventory.pop();
+				pattyInventory.pop();
+				lettuceInventory.pop();
+				tomatoInventory.pop();
+				onionInventory.pop();
+				return true;
 			case 3:
-				pattyInventory.push(patty);
-				break;
+				try {
+					lettuceInventory.peek();
+					lettuceInventory.peek();
+					tomatoInventory.peek();
+					onionInventory.peek();
+				} catch (EmptyStackException e) {
+					return false;
+				}
+				
+				lettuceInventory.pop();
+				lettuceInventory.pop();
+				tomatoInventory.pop();
+				onionInventory.pop();
+				return true;
 			case 4:
-				lettuceInventory.push(lettuce);
-				break;
+				try {
+					bunInventory.peek();
+					pattyInventory.peek();
+					lettuceInventory.peek();
+					tomatoInventory.peek();
+				} catch (EmptyStackException e) {
+					return false;
+				}
+				
+				bunInventory.pop();
+				pattyInventory.pop();
+				lettuceInventory.pop();
+				tomatoInventory.pop();
+				return true;
 			case 5:
-				tomatoInventory.push(tomato);
-				break;
+				try {
+					cheeseInventory.peek();
+					bunInventory.peek();
+					pattyInventory.peek();
+					lettuceInventory.peek();
+					tomatoInventory.peek();
+				} catch (EmptyStackException e) {
+					return false;
+				}
+				
+				cheeseInventory.pop();
+				bunInventory.pop();
+				pattyInventory.pop();
+				lettuceInventory.pop();
+				tomatoInventory.pop();
+				return true;
 			case 6:
-				onionInventory.push(onion);
-				break;
-		}
+				try {
+					bunInventory.peek();
+					pattyInventory.peek();
+					lettuceInventory.peek();
+					onionInventory.peek();
+				} catch (EmptyStackException e) {
+					return false;
+				}
+				
+				bunInventory.pop();
+				pattyInventory.pop();
+				lettuceInventory.pop();
+				onionInventory.pop();
+				return true;
+				default:
+					return false;
+		} // switch
+		
 	}
 	
 	/**
