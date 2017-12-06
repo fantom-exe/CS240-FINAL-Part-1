@@ -28,11 +28,29 @@ public class Inventory {
 	private ArrayStack tomatoInventory;
 	private ArrayStack onionInventory;
 	
+	// items sold
+	int countItemOne;
+	int countItemTwo;
+	int countItemThree;
+	int countItemFour;
+	int countItemFive;
+	int countItemSix;
+	
+	// items wasted
+	int wasteCheese;
+	int wasteBun;
+	int wastePatty;
+	int wasteLettuce;
+	int wasteTomato;
+	int wasteOnion;
+	
 	// setup
 	Inventory() {
 		setupFoods();
 		setupMenu();
 		setupInventory();
+		resetCounters();
+		resetWaste();
 	}
 	
 	/**
@@ -60,6 +78,14 @@ public class Inventory {
 				break;
 		}
 		
+	}
+	
+	/**
+	 * Sort Food stacks
+	 */
+	public void sort() {
+//		bunInventory.
+//		shellSort.iterativeShellSort();
 	}
 	
 	/**
@@ -255,6 +281,30 @@ public class Inventory {
 		lettuceInventory = new ArrayStack();
 		tomatoInventory = new ArrayStack();
 		onionInventory = new ArrayStack();
+	}
+	
+	/**
+	 * Counters for number of sales
+	 */
+	public void resetCounters() {
+		countItemOne = 0;
+		countItemTwo = 0;
+		countItemThree = 0;
+		countItemFour = 0;
+		countItemFive = 0;
+		countItemSix = 0;
+	}
+	
+	/**
+	 * Counters for number of sales
+	 */
+	public void resetWaste() {
+		wasteCheese = 0;
+		wasteBun = 0;
+		wastePatty = 0;
+		wasteLettuce = 0;
+		wasteTomato = 0;
+		wasteOnion = 0;
 	}
 	
 }

@@ -8,7 +8,6 @@ public class BusinessDay {
 	private Random rand;
 	
 	// business variables
-//	private int hoursOfOperation;
 	private Inventory inventory;
 	private Customer customer;
 	private ArrayQueue line;
@@ -20,7 +19,6 @@ public class BusinessDay {
 	BusinessDay() {
 		rand = new Random(System.currentTimeMillis());
 		
-//		hoursOfOperation = 9;
 		inventory = new Inventory();
 		customer = new Customer();
 		line = new ArrayQueue();
@@ -84,10 +82,12 @@ public class BusinessDay {
 	public void closing() {
 		// Sort food items by expiration day. (pick any sort)
 		//Place items about to expire on top of stack. If item expires remove item. Increment lost item.
-		shellSort.iterativeShellSort();
+		
 		
 		//Example if I throw away a tomato I will increment wasteTomtato
 		
+		
+		inventory.resetCounters();
 	}
 	
 	// prints daily data

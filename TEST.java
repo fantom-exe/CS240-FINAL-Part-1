@@ -25,8 +25,6 @@ public class TEST {
 			
 			// business hours
 			for(int time = openingTime; time <= closingTime; time++) {
-				System.out.println(time);
-				
 				// customers attend
 				day.generateCustomers();
 				// customers order then leave

@@ -25,7 +25,7 @@ public class ArrayQueue<T> implements QueueInterface<T> {
 			back++;
 			queue[back] = newEntry;
 		}
-		else System.out.println("Line is full!");
+//		else System.out.println("Line is full!");
 	}
 	
 	/** Removes and returns the entry at the front of this queue.

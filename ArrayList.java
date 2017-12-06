@@ -8,7 +8,7 @@ public class ArrayList<T> implements ListInterface<T> {
 	
 	// defaults
 	ArrayList() {
-		list = (T[])new Object[6];
+		list = (T[])new Object[10];
 		currentSize = 0;
 	}
 	
