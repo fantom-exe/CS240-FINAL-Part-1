@@ -91,9 +91,23 @@ public class BusinessDay {
 	// prints daily data
 	public void output(int day) {
 		// the day, customers lost, wasted items, items ordered
-		System.out.println("Day: December " + (day - 1200) + " | Customers lost: " + lostCustomerDay +
-				" | Wasted Items " + inventory.getWasteBun());
+		System.out.println("Day: December " + (day - 1200) + " | Customers lost: " + lostCustomerDay);
+		System.out.println("Wasted food -> "
+				+ " | Wasted cheese: " + inventory.getWasteCheese()
+				+ " | Wasted buns: " + inventory.getWasteBun()
+				+ " | Wasted patties: " + inventory.getWastePatty()
+				+ " | Wasted lettuce: " + inventory.getWasteLettuce()
+				+ " | Wasted tomatoes: " + inventory.getWasteTomato()
+				+ " | Wasted onions: " + inventory.getWasteOnion());
+		System.out.println("Items ordered -> "
+				+ " | Ordered itemOne: " + inventory.getCountItemOne()
+				+ " | Ordered itemTwo: " + inventory.getCountItemTwo()
+				+ " | Ordered itemThree: " + inventory.getCountItemThree()
+				+ " | Ordered itemFour: " + inventory.getCountItemFour()
+				+ " | Ordered itemFive: " + inventory.getCountItemFive()
+				+ " | Ordered itemSix: " + inventory.getCountItemSix());
 		
+		System.out.println();
 		// then the dict and everything on a new line
 	}
 	

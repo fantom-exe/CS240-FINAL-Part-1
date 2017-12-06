@@ -30,9 +30,10 @@ public class TEST {
 				// customers order then leave
 				day.placeOrders();
 				
-				// print
-				day.output(date);
 			}
+			
+			// print
+			day.output(date);
 			
 			// end the day
 			day.closing();

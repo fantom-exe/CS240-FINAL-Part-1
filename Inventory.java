@@ -154,6 +154,7 @@ public class Inventory {
 					return false;
 				}
 				
+				countItemOne++;
 				bunInventory.pop();
 				pattyInventory.pop();
 				lettuceInventory.pop();
@@ -172,6 +173,7 @@ public class Inventory {
 					return false;
 				}
 				
+				countItemTwo++;
 				cheeseInventory.pop();
 				bunInventory.pop();
 				pattyInventory.pop();
@@ -189,6 +191,7 @@ public class Inventory {
 					return false;
 				}
 				
+				countItemThree++;
 				lettuceInventory.pop();
 				lettuceInventory.pop();
 				tomatoInventory.pop();
@@ -204,6 +207,7 @@ public class Inventory {
 					return false;
 				}
 				
+				countItemFour++;
 				bunInventory.pop();
 				pattyInventory.pop();
 				lettuceInventory.pop();
@@ -220,6 +224,7 @@ public class Inventory {
 					return false;
 				}
 				
+				countItemFive++;
 				cheeseInventory.pop();
 				bunInventory.pop();
 				pattyInventory.pop();
@@ -236,6 +241,7 @@ public class Inventory {
 					return false;
 				}
 				
+				countItemSix++;
 				bunInventory.pop();
 				pattyInventory.pop();
 				lettuceInventory.pop();
