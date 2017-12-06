@@ -46,10 +46,13 @@ public class BusinessDay {
 	
 	// orders placed
 	public void placeOrders() {
+		boolean status;
 		// customers order one by one
 		while(!line.isEmpty()) {
+			status = inventory.order(1 + rand.nextInt(5));
+			
 			// order failed
-			if(!inventory.order(1 + rand.nextInt(5)))
+			if(!status)
 				lostCustomerDay++;
 			
 			// shorten line

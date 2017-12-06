@@ -158,6 +158,7 @@ public class Inventory {
 					return false;
 				}
 				
+				System.out.println("BRUH");
 				countItemOne++;
 				bunInventory.pop();
 				pattyInventory.pop();
